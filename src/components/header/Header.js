@@ -59,7 +59,7 @@ export default function Header(){
                         </li>
 
                          <li className="list-inline-item btn">
-                            <Button onClick={()=>{setVisible(!visible)}} className="bg-g">Login/Signup</Button>
+                            <Button onClick={()=>{setVisible(!visible)}} className="bg-g">Login/</Button>
                         </li>
                         
                         
