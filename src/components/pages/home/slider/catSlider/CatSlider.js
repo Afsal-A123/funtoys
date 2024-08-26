@@ -9,29 +9,30 @@ import item5 from '../../../../../assets/item5.png'
 
 export default function CatSlider(){
 
-    const [itemBg,setItemBg] = useState([
-        {color :'#fffceb',image: 'https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/cat-9.png',name:"Red Apple"},
-         {color :'#ecffec',image: 'https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/cat-12.png',name:"Organic Kiwi"},
-          {color :'#fffceb',image: 'https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/cat-11.png',name: "Peach"},
-           {color :'#feefea',image:'https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/cat-2.png',name:"Strawberry"},
-        {color :'#fff3ff',image:'https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/cat-5.png',name:'Custard Apple'},
-        {color :'#f2fce4',image:'https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/cat-6.png',name:'Green Grapes'},
-        {color :'#fff3ff',image:'https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/cat-7.png',name:'Orange'},
-        {color :'#feefea',image:'https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/cat-4.png',name:'Black Plum'},
-        {color :'#f2fce4',image:'https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/cat-1.png',name:'Cabbage'}
-    ]);
+    const data = [ 
+        {color :'#fff3ff',image:'https://snooplay.in/cdn/shop/files/Age-Cards---Website---0-11-months_540x.jpg?v=1701674921',name:'Custard Apple'},
+        {color :'#feefea',image:'https://snooplay.in/cdn/shop/files/Age-Cards---Website---1-2-Years_360x.jpg?v=1701674944',name:"Strawberry"},
+        {color :'#fffceb',image: 'https://snooplay.in/cdn/shop/files/Age-Cards---Website---3-6-Years_360x.jpg?v=1701677016',name: "Peach"},
+       {color :'#f2fce4',image:'https://snooplay.in/cdn/shop/files/Age-Cards---Website---7-12-Years_540x.jpg?v=1701677082',name:'Green Grapes'},
+       {color :'#fff3ff',image:'https://snooplay.in/cdn/shop/files/Age-Cards---Website---13-17-Years_360x.jpg?v=1701677143',name:'Orange'},
+       {color :'#feefea',image:'https://snooplay.in/cdn/shop/files/Age-Cards---Website---Grown-Ups_360x.jpg?v=1701677171',name:'Black Plum'},
+     
+    ];
+
+
+    const [itemBg,setItemBg] = useState(data);
        
         
     
    
    var settings  ={
         dots: false,
-        infinite: true,
+        infinite: false,
         speed: 500,
-        slidesToShow: 8,
+        slidesToShow: 5,
         slidesToScroll: 1,
         fade:false,
-        arrow:false
+        arrow: true
     }
     return (
         <div className="CatSliderSection">
@@ -40,15 +41,14 @@ export default function CatSlider(){
                 
                     <Slider {...settings} className="cat_slider_main" id="cat_slider_main">
                         {
-                            itemBg.length!==0&&itemBg.map((item,index)=>{
+                            itemBg.length!==0&&itemBg.map((item)=>{
                                 return (
-                                    <div className="item" >
+                                    
                                         <div className="info" style={{background:item.color}}>
                                             <img src={item.image} alt="mango" />
-                                            <h5>{item.name}</h5>
-                                            <p>26 items</p>
+                                            
                                         </div>
-                                    </div>
+                                    
                                 );
                             })
                         }
