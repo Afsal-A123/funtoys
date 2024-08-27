@@ -46,6 +46,22 @@ export default function Popular(){
             <div className="item">
                 <Product/>
             </div>
+            <div className="item">
+                <Product/>
+            </div>
+            <div className="item">
+                <Product/>
+            </div>
+            <div className="item">
+                <Product/>
+            </div>
+            <div className="item">
+                <Product/>
+            </div>
+            <div className="item">
+                <Product/>
+            </div>
+           
         </div>
      </section>
     );

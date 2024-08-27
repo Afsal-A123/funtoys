@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Styles from "../header/Select.module.css";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 const Select =()=>{
-    const data = ["All Category","Vegetables","Fruits","Beverages","Snacks"];
+    const data = ["All Category","0 - 11 Months","1 - 2 Years","3 - 6 Years","7 - 12 Years","13 - 17 Years","Grown Ups"];
     const [isOpenSelect, setisOpenSelect] = useState(false);
     const [selectedIndex, setselectedIndex]= useState(0);
     const [selectedItem, setselectedItem]= useState("All Category");
