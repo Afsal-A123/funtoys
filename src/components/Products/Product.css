@@ -1,5 +1,16 @@
 .ProductThumb{
     width: 100%;
-    height: 300px;
-    background-color: #ccc;
+    height: auto;
+    border: 1px solid rgba(0,0,0,0.2);
+    overflow: hidden;
+    border-radius: 5px;
+    padding: 15px;
+}
+.ProductThumb .title{
+    color: #000;
+    font-weight: 600;
+    font-size: 22px;
+}
+.ProductThumb .info .foot .rupees{
+    font-size: large;
 }
