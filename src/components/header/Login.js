@@ -11,11 +11,9 @@ export default function Login({visibile,setVisible})
     <div className="snooplay-login-container">
      
     <div className="snooplay-login-box">
-<<<<<<< HEAD
-    <button  className="undo" onClick={()=>{setundo("True")}}>X</button>
-=======
+
        <div className="close" onClick={()=>{setVisible(false)}}><CloseIcon/></div>
->>>>>>> 3f13dd0 (updates)
+
       <div className="snooplay-logo">
         
         <img src="https://snooplay.in/cdn/shop/files/Snooplay_logo_medium_1_220x.png?v=1659702830" alt="Spotify Logo" /> {/* Add your Spotify logo here */}
