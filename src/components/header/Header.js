@@ -12,6 +12,7 @@ import Nav from "../nav/Nav";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import GridViewIcon from '@mui/icons-material/GridView';
 import { useState } from "react";
+import Login from "./Login";
 export default function Header(){
 
     const [visible,setVisible] = useState(false);
@@ -73,16 +74,7 @@ export default function Header(){
             <hr/>
             
 
-            <Modal  style={{
-                overlay:{
-                    background:'#ffff'
-                }
-            }} isOpen={visible} onRequestClose={()=>{setVisible(false)} }>
-               
-                   
-
-               
-            </Modal>
+            {visible && <div className="body-login"><Login/></div>}
         </header>
 
     );
