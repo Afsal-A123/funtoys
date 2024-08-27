@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Product.css";
 import Rating from '@mui/material/Rating';
+import  ShoppingCartOutlinedIcon  from '@mui/icons-material/ShoppingCartOutlined';
 export default function Product(){
     return  (<div className='ProductThumb'>
         <div className='imgWrapper'>
@@ -14,10 +15,10 @@ export default function Product(){
             <br/>
             <div className='d-flex align-items-center '>
                 <div className='d-flex align-items-center '>
-                    <span className='price'>Rs.1485</span>
-                    <span className='oldprice'>Rs. 2800</span>
+                    <span className='price1'>Rs.1485</span>
+                    <span className='oldprice1'>Rs. 2800</span>
                 </div>
-                <button className='button1'>Add</button>
+                <button className='button1'><ShoppingCartOutlinedIcon/> Add</button>
             </div>
         </div>
     </div>)
