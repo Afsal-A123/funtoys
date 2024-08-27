@@ -1,6 +1,7 @@
 import "./Login.css";
 import { useState } from "react";
-export default function Login()
+import CloseIcon from '@mui/icons-material/Close';
+export default function Login({visibile,setVisible})
 {
   const [element,setelement]=useState("Login");
   const [undo,setundo] = useState("false");
@@ -8,15 +9,21 @@ export default function Login()
     <div>
      { undo==="false"?
     <div className="snooplay-login-container">
+     
     <div className="snooplay-login-box">
+<<<<<<< HEAD
     <button  className="undo" onClick={()=>{setundo("True")}}>X</button>
+=======
+       <div className="close" onClick={()=>{setVisible(false)}}><CloseIcon/></div>
+>>>>>>> 3f13dd0 (updates)
       <div className="snooplay-logo">
+        
         <img src="https://snooplay.in/cdn/shop/files/Snooplay_logo_medium_1_220x.png?v=1659702830" alt="Spotify Logo" /> {/* Add your Spotify logo here */}
       </div>
       <h2>{element} in to Snooplay</h2>
       <div className="buttons">
       <div id={element==="Login"?"btnlogin":"btn"}></div>
-        <button className="login" onClick={()=>{setelement("Login")}}>Log In</button>
+        <button className="login" onClick={()=>{setelement("Login"); }}>Log In</button>
         <button className="login" onClick={()=>{setelement("Sign")}}>Sign Up</button>
       </div>
       <form>
@@ -72,8 +79,8 @@ export default function Login()
       </div>:<div></div>}
       {element==="Login"?
       <div className="social-login-buttons">
-        <button className="social-login google">Continue with Google</button>
-        <button className="social-login facebook">Continue with Facebook</button>
+        <button className="social-login google" onClick={()=>{setVisible(false)}}>Continue with Google</button>
+        
         <button className="social-login apple">Continue with Apple</button>
       </div>:<div></div>}
     </div>

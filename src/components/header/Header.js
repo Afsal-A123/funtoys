@@ -74,7 +74,7 @@ export default function Header(){
             
             
 
-            {visible && <div className="body-login"><Login/></div>}
+            {visible && <div className="body-login"><Login data={visible} setVisible={setVisible}/></div>}
         </header>
 
     );

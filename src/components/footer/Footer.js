@@ -60,8 +60,8 @@ const Footer=()=>{
            <footer>
             <div className='container-fluid'>
                 <div className='row'>
-                    <div className='col-md-3 part1'>
-                        <h3>Details</h3>
+                    <div className='col-md-3 part1 footer'>
+                        <h3 >Details</h3>
                         <p>Awesome grocery store website template</p>
                         <p><LocationOnOutlinedIcon/> <strong>Address:</strong> 45, Anna Nagar, South Ukkadam, Coimbatore, 641-001</p>
                         <p><CallIcon/> <strong>Call Us:</strong> 1900-888-000</p>
