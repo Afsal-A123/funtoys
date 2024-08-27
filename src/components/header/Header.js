@@ -68,10 +68,10 @@ export default function Header(){
                     </div>
                     </div>
                 </div>
-
+<hr/>
                
             </div>
-            <hr/>
+            
             
 
             {visible && <div className="body-login"><Login/></div>}

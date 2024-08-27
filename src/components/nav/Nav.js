@@ -20,17 +20,19 @@ const Nav=()=>{
                             <li className='list-inline-item'>
                                 <Button><Link to="/Home">Home</Link></Button>
                             </li>
+                           
                             <li className='list-inline-item'>
-                                <Button><Link to="/About">About</Link></Button>
-                            </li>
-                            <li className='list-inline-item'>
-                                <Button><Link>Deals</Link></Button>
+                                <Button><Link to="/Deals">Deals</Link></Button>
                             </li>
                             <li className='list-inline-item'>
                                 <Button><Link>Shops</Link></Button>
                             </li>
                             <li className='list-inline-item'>
                                 <Button><Link>Vendors</Link></Button>
+
+                            </li>
+                             <li className='list-inline-item'>
+                                <Button><Link to="/About">About</Link></Button>
                             </li>
                             <li className='list-inline-item'>
                                 <Button><Link>Contact</Link></Button>
