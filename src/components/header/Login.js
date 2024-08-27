@@ -3,9 +3,13 @@ import { useState } from "react";
 export default function Login()
 {
   const [element,setelement]=useState("Login");
+  const [undo,setundo] = useState("false");
   return (
+    <div>
+     { undo==="false"?
     <div className="snooplay-login-container">
     <div className="snooplay-login-box">
+    <button  className="undo" onClick={()=>{setundo("True")}}>X</button>
       <div className="snooplay-logo">
         <img src="https://snooplay.in/cdn/shop/files/Snooplay_logo_medium_1_220x.png?v=1659702830" alt="Spotify Logo" /> {/* Add your Spotify logo here */}
       </div>
@@ -73,6 +77,7 @@ export default function Login()
         <button className="social-login apple">Continue with Apple</button>
       </div>:<div></div>}
     </div>
+  </div>:<div></div>}
   </div>
   );
 }
