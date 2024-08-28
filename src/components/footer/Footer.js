@@ -21,42 +21,7 @@ import AppleStoreIcon from "../../assets/applestore.png"
 const Footer=()=>{
     return(
         <div className='footerWrapper'>
-            <div className='footerBoxes'>
-                <div className='container-fluid'>
-                    <div className='row'>
-                        <div className='col'>
-                            <div className='box d-flex align-items-center w-100'>
-                                <span><img src={fBanner1}/></span>
-                                
-                            </div>
-                        </div>
-                        <div className='col'>
-                            <div className='box d-flex align-items-center w-100'>
-                               <span><img src={fBanner2}/></span>
-                            </div>
-                        </div>
-                        <div className='col'>
-                            <div className='box d-flex align-items-center w-100'>
-                                <span><img src={fBanner3}/></span>
-                                
-                            </div>
-                        </div>
-                        <div className='col'>
-                            <div className='box d-flex align-items-center w-100'>
-                                <span><img src={fBanner4}/></span>
-                                <div className='info'>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div className='col'>
-                            <div className='box d-flex align-items-center w-100'>
-                                <span><img src={fBanner5}/></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           
            <footer>
             <div className='container-fluid'>
                 <div className='row'>
