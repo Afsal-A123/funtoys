@@ -16,8 +16,8 @@ body {
   justify-items: center;
   align-items: center;
 }
-.logo{
-  height:  75px !important;
+.logo {
+  height: 75px !important;
   width: auto;
 }
 img {
@@ -125,14 +125,13 @@ header .header-Tabs li span img {
 header Modal {
   background-color: red;
 }
-.body-login{
+.body-login {
+  left: 0;
+  right: 0;
 
-  left: 0; 
-  right: 0; 
-  
-  margin-left: auto; 
+  margin-left: auto;
   margin-right: auto;
-position: fixed ;
-z-index: 1000;
-top: 3%;
+  position: fixed;
+  z-index: 1000;
+  top: 3%;
 }
