@@ -77,7 +77,7 @@ export default function Login({visibile,setVisible})
       </div>:<div></div>}
       {element==="Login"?
       <div className="social-login-buttons">
-        <button className="social-login google" onClick={()=>{setVisible(false)}}>Continue with Google</button>
+        <button className="social-login google" > Continue with Google</button>
         
         <button className="social-login apple">Continue with Apple</button>
       </div>:<div></div>}
