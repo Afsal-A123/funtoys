@@ -1,10 +1,92 @@
 import "./Login.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CloseIcon from '@mui/icons-material/Close';
+import axios from 'axios';
 export default function Login({visibile,setVisible})
 {
   const [element,setelement]=useState("Login");
   const [undo,setundo] = useState("false");
+  const [email,setEmail]=useState('');
+  const[pass,Setpass]=useState('');
+  const [cpass,SetCpass]=useState('');
+  const [data,setData]=useState([]);
+  const [copy,setCopy]=useState([]);
+  function handleLogin(e){
+    e.preventDefault();
+    if(element=='Login')
+    {
+      let l_email=email;
+      let l_pass=pass;
+      if(l_email.length!==0 && l_pass!==0)
+      {
+        axios.get("http://localhost:8000/user")
+        .then(res=>{setData(res.data);})
+        .catch(err=>console.log(err));
+      
+      if(data.length!==0)
+      {
+        let found=false;
+        data.map((value)=>{
+          if(value.email==l_email)
+          {
+            found=true;
+            if(value.password!==l_pass)
+            {
+              console.log("Incorrect password");
+            }
+            else{
+              console.log("success...");
+              setVisible(false);
+            }
+          }
+        })
+        if(!found)
+        {
+          console.log("User not found");
+        }
+      }
+    }
+  }
+  else {
+    let s_email=email;
+    let s_pass=pass;
+    let s_cpass=cpass;
+    if(s_email.length!==0 && s_pass.length!==0 && s_cpass.length)
+    {
+      if(s_pass===s_cpass)
+      {
+        axios.get("http://localhost:8000/user")
+        .then((res)=>{
+          setCopy(res);
+      if(copy.length!==0)
+      {
+        let found=false;
+        data.map((value)=>{
+          if(value.email===s_email)
+          {
+            found=true;
+          }
+        })
+        if(!found)
+        {
+          axios.post("http://localhost:8000/user",{
+            email:s_email,
+            password:s_cpass
+          })
+          .then(res=>{console.log("SignUp Successful"); setVisible(false)})
+          .catch(err=>console.log(err));
+        }
+        else{
+          console.log("User already exist");
+        }
+      }
+      })
+      .catch(err => console.log(err));
+    }
+      }
+    }
+  }
+  
   return (
     <div>
      { undo==="false"?
@@ -29,29 +111,27 @@ export default function Login({visibile,setVisible})
         <div className="input-group">
           <label>Email or username</label>
           <input type="text" placeholder="Email or username" required />
-          <p className="error-message">Please enter your Snooplay username or email address.</p>
         </div>
         :<div className="input-group">
         <div className="sign">
           <label>username</label>
           <input type="text" placeholder="Email or username" required />
-        
-          <p className="error-message">Please create your Snooplay username.</p>
           </div>
+
           <div className="sign">
           <label>Email</label>
           <input type="text" placeholder="Email or username" required />
-          <p className="error-message">Please create your Snooplay email adress.</p>
+          
           </div>
           <div className="sign">
           <label>Create Password</label>
           <input type="text" placeholder="Enter your password" required />
-          <p className="error-message">Please create your Snooplay password.</p>
+          
           </div>
           <div className="sign">
           <label>Confirm Password</label>
           <input type="text" placeholder="Enter your password again" required />
-          <p className="error-message">Please confirm your Snooplay password.</p>
+         
           </div>
           </div>}
           {element==="Login"?
