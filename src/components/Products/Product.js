@@ -5,7 +5,7 @@ import  ShoppingCartOutlinedIcon  from '@mui/icons-material/ShoppingCartOutlined
 export default function Product({data}){
     return  (<div className='ProductThumb'>
         <div className='imgWrapper'>
-        <img data-v-0f749a84="" title="2 Layers Art Supplies Coloring Portable Case Kit (145 Pieces) - Assorted Case Colours &amp; Designs" class="main-img" data-src={data.image} src={data.image} lazy="loaded"/>
+        <img data-v-0f749a84="" title="2 Layers Art Supplies Coloring Portable Case Kit (145 Pieces) - Assorted Case Colours &amp; Designs" class="main-img" data-src={data.image} src={data.image} lazy="loaded" alt="jh"/>
         </div>
         <br/>
         <div className='information'>

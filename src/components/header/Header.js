@@ -16,6 +16,7 @@ import Login from "./Login";
 export default function Header(){
 
     const [visible,setVisible] = useState(false);
+    const [status,setStatus] = useState(false);
     
 
     return (
@@ -60,7 +61,19 @@ export default function Header(){
                         </li>
 
                          <li className="list-inline-item btn">
-                            <Button onClick={()=>{setVisible(!visible)}} className="bg-g">Login/Signup</Button>
+                            {
+                                !status&&<div>
+
+                                    <Button onClick={()=>{setVisible(!visible)}} className="bg-g">Login/Signup</Button>
+                                </div>
+                            
+                        }
+                            {
+                                status&&<div>
+                                    <Button onClick={()=>{localStorage.setItem("loginStatus",false);}} style={{background:'red'}}>Sign Out</Button>
+
+                                </div>
+                            }
                         </li>
                         
                         
@@ -74,7 +87,9 @@ export default function Header(){
             
             
 
-            {visible && <div className="body-login"><Login data={visible} setVisible={setVisible}/></div>}
+            {visible && <div className="body-login">
+                <Login data={visible} setStatus={setStatus} setVisible={setVisible}/>
+                </div>}
         </header>
 
     );
