@@ -27,10 +27,10 @@ const Footer=()=>{
                 <div className='row'>
                     <div className='col-md-3 part1 footer'>
                         <h3 >Details</h3>
-                        <p>Awesome grocery store website template</p>
+                        <p>Fantastic Toys Store</p>
                         <p><LocationOnOutlinedIcon/> <strong>Address:</strong> 45, Anna Nagar, South Ukkadam, Coimbatore, 641-001</p>
                         <p><CallIcon/> <strong>Call Us:</strong> 1900-888-000</p>
-                        <p><EmailOutlinedIcon/> <strong>Email:</strong> nector@gmail.com</p>
+                        <p><EmailOutlinedIcon/> <strong>Email:</strong> snooplay@gmail.com</p>
                         <p><WatchLaterOutlinedIcon/> <strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
                     </div>
                     <div className='col-md-8 part2'>
@@ -74,13 +74,12 @@ const Footer=()=>{
                             <div className='col'>
                                 <ul className='footer-list mb-sm-5 mb-md-0'>
                                     <h3>Popular</h3>
-                                    <li><Link to="#">Barbie &amp; Teddy</Link></li>
                                     <li><Link to="#">Remote Controlled Toys</Link></li>
-                                    <li><Link to="#">Eggs Substitutes</Link></li>
-                                    <li><Link to="#">Marmalades</Link></li>
-                                    <li><Link to="#">Sour Cream and Dips</Link></li>
-                                    <li><Link to="#">Tea &amp; Kombucha</Link></li>
-                                    <li><Link to="#">Cheese</Link></li>
+                                    <li><Link to="#">Spiderman Toys</Link></li>
+                                    <li><Link to="#">Ben Ten toys</Link></li>
+                                    <li><Link to="#">Barbie &amp; Teddy</Link></li>
+                                    <li><Link to="#">Vehicle Toys</Link></li>
+                                    <li><Link to="#">Animal Toys</Link></li>
                                 </ul>
                             </div>
                             <div className='col'>
@@ -99,7 +98,7 @@ const Footer=()=>{
                 <hr/>
                 <div className='row lastStrip'>
                     <div className='col-md-3'>
-                        &#169; 2022, Nest-HTML Ecommerce Template All rights reserved
+                        &#169; 2023, Funtoys-HTML Ecommerce Template All rights reserved
                     </div>
                     
                     <div className='col-md-3 part3'>

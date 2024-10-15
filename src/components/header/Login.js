@@ -145,7 +145,7 @@ export default function Login({visibile,setStatus,setVisible})
           <div className="input-group">
           <label>Password</label>
           <input type={pass} onChange={(e)=>{setPass(e.target.value)}} placeholder="Password" required />
-          <span className="show-password-icon">👁️</span> {/* Use an icon for show/hide password */}
+          <span className="show-password-icon"></span> {/* Use an icon for show/hide password */}
         </div>:<div></div>}
         {element==="Login"?
         <div className="remember-me">
